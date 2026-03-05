@@ -1,0 +1,37 @@
+body{
+font-family: Arial;
+background:#eef3f8;
+}
+
+.form-box{
+width:350px;
+margin:120px auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+input{
+width:90%;
+padding:8px;
+margin:10px 0;
+}
+
+button{
+width:95%;
+padding:10px;
+background:#1565c0;
+color:white;
+border:none;
+border-radius:5px;
+}
+
+.card{
+background:white;
+padding:15px;
+margin:15px;
+border-radius:8px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}

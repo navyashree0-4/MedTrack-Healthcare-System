@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<h2>Doctor Dashboard</h2>
+
+{% for a in appointments %}
+
+<div class="card">
+
+Patient: {{a.patient_id}} <br>
+Date: {{a.date}}
+
+<form action="/add_diagnosis/{{a._id}}" method="POST">
+
+<input type="hidden" name="patient" value="{{a.patient_id}}">
+
+<textarea name="report" placeholder="Diagnosis Report"></textarea>
+
+<button>Add Diagnosis</button>
+
+</form>
+
+</div>
+
+{% endfor %}
+
+<a href="/logout">Logout</a>

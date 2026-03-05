@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<h2>Patient Dashboard</h2>
+
+<a href="/book">Book Appointment</a>
+
+{% for a in appointments %}
+
+<div class="card">
+
+Doctor ID: {{a.doctor_id}} <br>
+Date: {{a.date}} <br>
+Time: {{a.time}} <br>
+Status: {{a.status}}
+
+</div>
+
+{% endfor %}
+
+<a href="/logout">Logout</a>

@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<div class="container">
+<h2>Add Medical Record</h2>
+
+<form method="POST">
+<input type="text" name="patient_name" placeholder="Patient Name" required>
+<input type="text" name="disease" placeholder="Disease" required>
+<input type="text" name="prescription" placeholder="Prescription" required>
+<button type="submit">Save Record</button>
+</form>
+
+</div>

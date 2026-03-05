@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<h2>Admin Dashboard</h2>
+
+{% for u in users %}
+
+<div class="card">
+Name: {{u.name}} <br>
+Role: {{u.role}}
+</div>
+
+{% endfor %}
+
+<a href="/logout">Logout</a>
