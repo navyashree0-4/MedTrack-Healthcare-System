@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<h2>Edit User</h2>
+
+<form method="POST">
+<input type="text" name="name" value="{{ user.name }}">
+<input type="email" name="email" value="{{ user.email }}">
+
+<select name="role">
+<option {% if user.role=='Admin' %}selected{% endif %}>Admin</option>
+<option {% if user.role=='Doctor' %}selected{% endif %}>Doctor</option>
+<option {% if user.role=='Patient' %}selected{% endif %}>Patient</option>
+</select>
+
+<button type="submit">Update</button>
+</form>

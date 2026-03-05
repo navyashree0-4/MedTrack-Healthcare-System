@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<div class="dashboard">
+
+    <div class="top-bar">
+        <h2>Patient Dashboard</h2>
+        <a class="logout-btn" href="/logout">Logout</a>
+    </div>
+
+    <div class="profile-card">
+        <h3>Welcome {{ name }}</h3>
+        <p>Role: Patient</p>
+    </div>
+
+    <h3 class="section-title">My Medical Records</h3>
+
+    {% if records|length > 0 %}
+        {% for r in records %}
+        <div class="record-card">
+            <p><strong>Date:</strong> {{ r.date }}</p>
+            <p><strong>Disease:</strong> {{ r.disease }}</p>
+            <p><strong>Prescription:</strong> {{ r.prescription }}</p>
+            <p><strong>Doctor:</strong> Dr. {{ r.doctor }}</p>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p class="no-record">No medical records found.</p>
+    {% endif %}
+
+</div>
